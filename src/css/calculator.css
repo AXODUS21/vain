@@ -1,0 +1,98 @@
+/* From Uiverse.io by csemszepp */ 
+.calc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+.calculator{
+    width: 25rem;
+    background-color: rgb(208, 202, 202);
+    height: 45  0px;
+    border-radius: 20px;
+}
+.text-input{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    width: 75%;
+    border: #1d1d1d solid 2px;
+    align-items: center;
+    height: 70px;
+    margin: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+}
+.calc-button-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px 39px;
+    gap: 40px;
+}
+.numbers{
+    display: grid;
+    gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.operators{
+    display: grid;
+    gap: 5px;
+}
+.calc-button-container button{
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.60em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.calc-button-container button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.calc-button-container button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}

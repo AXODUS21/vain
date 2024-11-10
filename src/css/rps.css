@@ -1,0 +1,22 @@
+.rps-container{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    color: white;
+    background: #000;
+}
+.rps-container button{
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 9999px;
+    padding: 3vw;
+}
+.choices-container{
+    display: flex;
+    gap: 5vw;
+}
+.rps-choices{
+    height: 10vw;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
